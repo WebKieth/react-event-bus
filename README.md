@@ -1,14 +1,14 @@
-# react-event-bus  
+# react-eventbus-provider  
 Event-based development providing for React
 
 ### installing  
 ```
-yarn add react-event-bus
+yarn add react-eventbus-provider
 ```
 ### usage  
 Rendering Provider  
 ```
-import { EventBusProvider } from 'react-event-bus'
+import { EventBusProvider } from 'react-eventbus-provider'
 ...
 /** Declare component and return provider in render */
 return <EventBusProvider>{ children: ReactNode }</EventBusProvider>
@@ -17,7 +17,7 @@ return <EventBusProvider>{ children: ReactNode }</EventBusProvider>
 Subscribe on event  
 ```
 import { useEffect } from 'react'
-import { useEventBusProvided } from 'react-event-bus'
+import { useEventBusProvided } from 'react-eventbus-provider'
 const MyComponent = () => {
     const bus = useEventBusProvided()
     const handleMyBusEvent = (...args) => {
@@ -33,7 +33,7 @@ const MyComponent = () => {
   
 Calling (emitting) events  
 ```
-import { useEventBusProvided } from 'react-event-bus'
+import { useEventBusProvided } from 'react-eventbus-provider'
 const MyComponent = () => {
     const { $emit } = useEventBusProvided()
     return <div>
