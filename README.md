@@ -35,9 +35,9 @@ Calling (emitting) events
 ```
 import { useEventBusProvided } from 'react-eventbus-provider'
 const MyComponent = () => {
-    const { $emit } = useEventBusProvided()
+    const bus = useEventBusProvided()
     return <div>
-        <button onClick={(e) => $emit('onMyBusEvent', e)}></button>
+        <button onClick={(e) => bus.$emit('onMyBusEvent', e)}></button>
     </div>
 }
 ```
