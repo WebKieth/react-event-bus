@@ -3,6 +3,11 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
+  "keywords": [
+    "react",
+    "events",
+    "callback memoizing"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
